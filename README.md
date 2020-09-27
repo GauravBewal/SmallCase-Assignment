@@ -13,6 +13,11 @@ How to Run Scenarios
 2. Now Select the scenario file.
 3. Right click on it and click on Run As.
 4. Now, choose TestNG Test.
+
+For Parallel execution -
+
+1. Right click on the testng.xml file and click on Run As.
+2. Now choose TestNG Suit.
 ```
 Project Structure
 --------------------------------
