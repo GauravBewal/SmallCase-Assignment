@@ -55,19 +55,19 @@ public class Scenario1 extends CommonFunctions{
 		flip = FilterPrice(flipkartPrice);
 		System.out.println("Flipkart Price - " + flip);
 		driver.findElement(selectors.FProductDiv1).click();
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		tabs = new ArrayList<String> (driver.getWindowHandles());
 		
 		// Add to cart in guest mode
 		driver.switchTo().window(tabs.get(1));
-		Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectors.FProductDiv2));
 		driver.findElement(selectors.FProductDiv2).click();
-		Thread.sleep(5000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectors.FTotalPrice));
 		flipkartPrice = driver.findElement(selectors.FTotalPrice).getText();
 		
 		// Increase Quantity by 1.
 		driver.findElement(selectors.IncQuantity).click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		
 		// Print the New Price
 		flipkartPrice = driver.findElement(selectors.FTotalPrice).getText();
